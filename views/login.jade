@@ -1,0 +1,24 @@
+extends ./layout.jade
+block header
+  .login-header
+    include ./includes/header.jade
+
+block content
+  .main-wrapper#login
+    .pure-u-1
+      if (gametime)
+        a(href='/login/facebook', class="login-button") Login with Facebook
+    .pure-u-1
+      if (gametime)
+        form(action='/login/guest',method='post')
+          input(type='hidden', name="password", value='password')
+          input(type='hidden', name="username", value='username')
+          button(type='submit', class="login-button") Login as guest
+    .pure-u-1
+      section(class="next-game")
+        p(class="label lg") Next Game
+        p(class="name") #{episode.gameTitle}
+        p(class="time") #{start} on #{episode.channel}
+// block footer
+//   .login-footer
+//     include ./includes/footer.jade

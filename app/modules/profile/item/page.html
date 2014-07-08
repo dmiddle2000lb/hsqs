@@ -1,0 +1,47 @@
+<h2>Your best game</h2>
+<% if (!scores.length) { %>
+  <p><a href="/">You haven't played any games yet.</a></p>
+<% } %>
+
+<% if (scores.length) { %>
+  <ul class="best-game pure-g">
+
+    <li class="pure-u-1-3 game-data">
+      <ul>
+        <li class="digits meta"><%= highest.points %></li>
+        <li class="label sm desc">Your Score</li>
+      </ul>
+    </li>
+
+    <li class="pure-u-1-3 game-data">
+      <ul>
+        <li class="digits meta"><%= rank.rank %></li>
+        <li class="label sm desc">Your Rank</li>
+      </ul>
+    </li>
+
+    <li class="pure-u-1-3 game-data">
+      <ul>
+        <li class="digits meta"><%= total %></li>
+        <li class="label sm desc">Total Players</li>
+      </ul>
+    </li>
+
+  </ul>
+
+<h2>Game play history</h2>
+<ul class="game-play">
+<% scores.forEach(function(score){ %>
+<li class="game-play-history">
+  <ul>
+    <li class="game-play-points"><%= score.points %></li>
+    <li>
+      <ul class="game-play-meta">
+        <li><%= score.game || "Your Game Score" %></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<% }); %>
+</ul>
+<% } %>

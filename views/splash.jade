@@ -1,0 +1,13 @@
+extends ./layout.jade
+block header
+  .login-header
+    include ./includes/header.jade
+block refresh
+  meta(http-equiv="refresh", content="2;URL='/login'")
+
+block content
+  div#splash
+    img(src='/app/img/full-hsquiz-logo.png')
+block footer
+  .login-footer
+    include ./includes/footer.jade

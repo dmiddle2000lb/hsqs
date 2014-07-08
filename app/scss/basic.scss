@@ -1,0 +1,112 @@
+/* Basic, non-enhanced styles for Ye Olde Agents here. If the agent is sufficiently modern, this stylesheet will be removed from the DOM */
+/* NB This stylesheet is read into the base html template at build time. It should only contain HTML 1 styles */
+p {
+    font-size: 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.login-header h1 {
+  margin: 0;
+}
+
+.details {
+  margin: 1em 0 0 0;
+}
+
+.details .user-id, .details .logout{
+  margin: 0;
+  text-align: left;
+  padding: 0 0 0 5px;
+  font-size: .9875em;
+  line-height: .9875em;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.details .logout {
+  margin-top: 0.5em;
+  a {
+    color: #0082DC;
+  }
+}
+
+.user-leader-box {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 5px 10px 10px 10px;
+}
+
+.question-text {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.answer-text {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.answer-text li {
+  color: #fff;
+  margin-bottom: 1em;
+  background: #777;
+  padding: 0.5em 0em 0.5em 1.4em;
+}
+
+.game-footer h1 {
+  text-align: center
+}
+
+.score-digits {
+  padding: 8px;
+  background: #666;
+}
+
+.sponsors, .credits {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.answer-text li.correct {
+  background: green
+}
+
+.answer-text li.incorrect {
+  background: red
+}
+
+.best-game, .best-game ul, .best-game li,
+.game-play, .game-play ul, .game-play li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.best-game .desc {
+  font-size: 0.8em;
+  text-align: center
+}
+
+.best-game .game-data:last-child {
+  margin-right: 0;
+}
+
+.game-play-points {
+  float: left;
+  margin-right: 1em;
+}
+
+.game-play-meta {
+  margin: 0 1em 0 0;
+}

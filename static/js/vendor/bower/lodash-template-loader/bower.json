@@ -1,0 +1,14 @@
+{
+  "name": "lodash-template-loader",
+  "version": "0.1.3",
+  "main": "loader.js",
+  "dependencies": {
+    "lodash": "~2.2.0"
+  },
+  "devDependencies": {
+    "qunit": "~1.12.0",
+    "requirejs": "~2.1.8",
+    "curl": "~0.8.2",
+    "dojo": "~1.9.1"
+  }
+}

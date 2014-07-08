@@ -1,0 +1,8 @@
+<p class="user-id">
+<% if ( name !== 'Guest') { %>
+  <b><a class="profile" href="/profile"><%= name %></a></b>
+<% } else { %>
+  <%= name %>
+<% } %>
+</p>
+<p class="logout label sm"><a href="/exit">Logout</a></p>

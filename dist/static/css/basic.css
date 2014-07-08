@@ -1,0 +1,134 @@
+/* Basic, non-enhanced styles for Ye Olde Agents here. If the agent is sufficiently modern, this stylesheet will be removed from the DOM */
+/* NB This stylesheet is read into the base html template at build time. It should only contain HTML 1 styles */
+/* line 3, ../../../app/scss/basic.scss */
+p {
+  font-size: 15px;
+}
+
+/* line 7, ../../../app/scss/basic.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, ../../../app/scss/basic.scss */
+li {
+  list-style: none;
+}
+
+/* line 16, ../../../app/scss/basic.scss */
+.login-header h1 {
+  margin: 0;
+}
+
+/* line 20, ../../../app/scss/basic.scss */
+.details {
+  margin: 1em 0 0 0;
+}
+
+/* line 24, ../../../app/scss/basic.scss */
+.details .user-id, .details .logout {
+  margin: 0;
+  text-align: left;
+  padding: 0 0 0 5px;
+  font-size: .9875em;
+  line-height: .9875em;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* line 34, ../../../app/scss/basic.scss */
+.details .logout {
+  margin-top: 0.5em;
+}
+/* line 36, ../../../app/scss/basic.scss */
+.details .logout a {
+  color: #0082DC;
+}
+
+/* line 41, ../../../app/scss/basic.scss */
+.user-leader-box {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 5px 10px 10px 10px;
+}
+
+/* line 48, ../../../app/scss/basic.scss */
+.question-text {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+/* line 53, ../../../app/scss/basic.scss */
+.answer-text {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 59, ../../../app/scss/basic.scss */
+.answer-text li {
+  color: #fff;
+  margin-bottom: 1em;
+  background: #777;
+  padding: 0.5em 0em 0.5em 1.4em;
+}
+
+/* line 66, ../../../app/scss/basic.scss */
+.game-footer h1 {
+  text-align: center;
+}
+
+/* line 70, ../../../app/scss/basic.scss */
+.score-digits {
+  padding: 8px;
+  background: #666;
+}
+
+/* line 75, ../../../app/scss/basic.scss */
+.sponsors, .credits {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 81, ../../../app/scss/basic.scss */
+.answer-text li.correct {
+  background: green;
+}
+
+/* line 85, ../../../app/scss/basic.scss */
+.answer-text li.incorrect {
+  background: red;
+}
+
+/* line 89, ../../../app/scss/basic.scss */
+.best-game, .best-game ul, .best-game li,
+.game-play, .game-play ul, .game-play li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 96, ../../../app/scss/basic.scss */
+.best-game .desc {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* line 101, ../../../app/scss/basic.scss */
+.best-game .game-data:last-child {
+  margin-right: 0;
+}
+
+/* line 105, ../../../app/scss/basic.scss */
+.game-play-points {
+  float: left;
+  margin-right: 1em;
+}
+
+/* line 110, ../../../app/scss/basic.scss */
+.game-play-meta {
+  margin: 0 1em 0 0;
+}

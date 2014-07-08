@@ -1,0 +1,132 @@
+@import "compass/css3";
+@import "breakpoint";
+
+// Media query-related variables. Define your own breakpoints here!
+$no-mq-ie: ".oldie";
+$medium-bkp: "600px";
+$wide-bkp: "900px";
+
+// Colors
+$black: #1c1c1c;
+$slate: #263248;
+$grayblue: #7E8AA2;
+$white: #fff;
+$orange: #f19a29;
+$bg: #003b76;
+$yellow: #fed302;
+$light-blue: #0082dc;
+$med-blue: #0082dc;
+$text-blue: #b3deff;
+
+// Fonts
+$myriad: "myriad-pro-condensed",sans-serif;
+
+// Utilites that work with Pure's defaults
+$u-1: 100%;
+$u-1-2: 50%;
+$u-1-3: 33.3333%;
+$u-2-3: 66.6667%;
+$u-1-4: 25%;
+$u-3-4: 75%;
+$u-1-5: 20%;
+$u-2-5: 40%;
+$u-3-5: 60%;
+$u-4-5: 80%;
+$u-1-6: 16.6667%;
+$u-5-6: 83.3333%;
+$u-1-8: 12.5%;
+$u-3-8: 37.5%;
+$u-5-8: 62.5%;
+$u-7-8: 87.5%;
+$u-1-12: 8.3333%;
+$u-5-12: 41.6667%;
+$u-7-12: 58.3333%;
+$u-11-12: 91.6667%;
+$u-1-24: 4.1667%;
+$u-5-24: 20.83333%;
+$u-7-24: 29.1667%;
+$u-11-24: 45.83333%;
+$u-13-24: 54.1667%;
+$u-17-24: 70.83333%;
+$u-19-24: 79.1667%;
+$u-23-24: 95.83333%;
+
+// It's easy to overcomplicate grids.
+// This is a simple, useful grid structure taken from Chris Coyier's post: http://css-tricks.com/dont-overthink-it-grids/
+* {
+  @include box-sizing(border-box);
+}
+
+$pad: 20px;
+$pad-nested: 10px;
+
+.mod {
+  margin: 0 0 $pad 0;
+
+  &:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  // nested modules remove all margin or it can mess with neighbouring modules
+  .mod {
+      margin: 0;
+  }
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: $pad;
+  .mod &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+/* Opt-in outside padding */
+.mod-pad {
+  padding: $pad 0 $pad $pad;
+  [class*='col-']:last-of-type {
+    padding-right: $pad;
+  }
+
+}
+// Opt-in flexible padding for responsive sites. Allows setting padding on .mod containers for different breakpoints
+
+@mixin flexPad($breakpoint, $padding: 0, $fallback: "") {
+    padding-left: $padding;
+    @include breakpoint($breakpoint, $no-query: $fallback){
+        padding-left: $pad;
+    }
+    [class*='col-'],
+    [class*='col-']:last-of-type {
+        padding-right: $padding;
+        @include breakpoint($breakpoint, $no-query: $fallback){
+            padding-right: $pad;
+        }
+
+    }
+}
+/* Sets the with and float of column.
+Optionally pass margin for pushing or pulling column in your layout */
+
+@mixin setCol($float, $width, $margin: $pad, $push-pull: 0){
+    width: $width;
+    float: $float;
+    margin-bottom: $margin;
+    @if $push-pull > 0 {
+        margin-left: $push-pull;
+    } @else if $push-pull < 0 {
+       margin-right: abs($push-pull);
+    }
+
+}
+
+// max-width: 100% makes media flexible for responsive web design
+img,
+video,
+object,
+iframe {
+    max-width: 100%;
+}

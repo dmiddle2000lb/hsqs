@@ -1,0 +1,50 @@
+<% if ( !_.isEmpty(rank) ) { %>
+<h2>Your game stats</h2>
+
+  <ul class="best-game pure-g">
+
+    <li class="pure-u-1-3 game-data">
+      <ul>
+        <li class="digits meta"><%= rank.points %></li>
+        <li class="label sm desc">Your Score</li>
+      </ul>
+    </li>
+
+    <li class="pure-u-1-3 game-data">
+      <ul>
+        <li class="digits meta"><%= rank.rank %></li>
+        <li class="label sm desc">Your Rank</li>
+      </ul>
+    </li>
+
+    <li class="pure-u-1-3 game-data">
+      <ul>
+        <li class="digits meta"><%= total %></li>
+        <li class="label sm desc">Total Players</li>
+      </ul>
+    </li>
+  </ul>
+<% } else { %>
+  <h2>Login via Facebook for your game history</h2>
+<% } %>
+
+<h2 class="top-10">Top 10 players</h2>
+<ul class="game-play">
+<% scores.forEach(function(score){ %>
+<li class="game-play-history">
+  <ul>
+    <li class="game-play-points"><%= score.points %></li>
+    <li>
+      <ul class="game-play-meta">
+        <li><!-- <a href="/profile/<%= score.owner.id %>"> -->
+          <%= score.owner.first_name %>
+          <% if (score.owner.last_name) { %>
+            <%= score.owner.last_name.charAt(0) %>
+          <% } %><!-- </a> -->
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<% }); %>
+</ul>

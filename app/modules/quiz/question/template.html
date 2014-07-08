@@ -1,0 +1,10 @@
+<div class="question-text">
+  <%= model.get('q') %>
+</div>
+<% if (!model.get('guessed')) { %>
+<ul class="answer-text">
+  <% answers.forEach(function(guess){ %>
+  <li class="answer" data-answer="<%= _.keys(guess) %>"><%= _.values(guess) %></li>
+  <% }) %>
+</ul>
+<% } %>

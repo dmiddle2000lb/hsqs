@@ -1,0 +1,210 @@
+a, a:link, a:hover, a:visited  {
+  color: $text-blue;
+}
+
+#layout {
+  margin-top: -60px;
+}
+
+#splash {
+  text-align: center;
+  margin: 7em 0 2em 0;
+}
+
+#login {
+  margin-top: 85px;
+}
+
+.login-button {
+  width: 100%;
+  background: $med-blue;
+  color: $text-blue;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 1.875em;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  margin: 0.2em 0;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-width: 0;
+  text-decoration: none;
+}
+
+.label {
+  color: $yellow;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: .06em;
+  margin: 0;
+  &.lg {
+    font-size: 1.0625em;
+  }
+  &.md {
+    font-size: .6875em;
+    font-family: "orbitron",sans-serif;
+  }
+  &.sm {
+    letter-spacing: 0;
+    font-size: .6875em;
+    color: $white;
+    text-transform: none;
+  }
+  &.med {
+    font-size: 0.9375em
+  }
+  &.orbitron {
+    font-family: "orbitron",sans-serif;
+  }
+
+}
+
+.next-game {
+  margin: 2em 0;
+  .name {
+    font-family: $myriad;
+    font-size: .9375em;
+    font-weight: 700;
+    line-height: 1.0625em;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+  }
+
+  .time {
+    font-family: $myriad;
+    font-weight: 700;
+    color: $med-blue;
+    text-align: center;
+    font-size: 1.2em;
+
+  }
+}
+
+header {
+  background: $black;
+  overflow: visible;
+  text-align: center;
+  margin-bottom: 4em;
+  height: 85px;
+}
+
+.logo b {
+  font-size: 113px;
+  line-height: 1px;
+}
+
+.digits {
+  font-family: $myriad;
+  font-weight: 700;
+  color: $yellow;
+  font-size: 1.875em;
+}
+
+.user-score {
+  font-family: "myriad-pro-condensed",sans-serif;
+  font-size: 2.1875em;
+  font-weight: 700;
+  color: #fed302;
+  list-style: none;
+  text-align: right;
+  line-height: 1px;
+  margin: 0.5em 0 12px 0;
+}
+
+.score-label {
+  text-align: right;
+}
+
+.user-leader-box ul {
+  margin: 0;
+  padding: 0;
+}
+
+.question-timer {
+  float: right;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border: 5px solid #0082dc;
+  margin: 10px 20px;
+  font-family: $myriad;
+  font-size: 1.3125em;
+  line-height: 2.1875em;
+  font-weight: 700;
+  color: #0082dc;
+  text-align: center;
+}
+
+.quiz-round {
+  text-align: left;
+}
+
+.question-text, .message {
+  font-size: 1.5625em;
+  font-weight: 700;
+  line-height: 1.3em;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.answer-text .answer {
+  background-color: #f86f12;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgba(249, 237, 50, 0.7);
+  text-align: center;
+  padding: 10px;
+  margin: 20px 0;
+  line-height: 1em;
+  text-transform: capitalize;
+}
+
+.game-data ul {
+  background-color: #010037;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  margin: 2em 0.5em 2em 0;
+}
+
+.game-play li.game-play-history {
+  background: #010037;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $text-blue;
+  text-align: left;
+  padding: 1em;
+  margin: 0 0 0.5em 0;
+  padding: 0.5em;
+}
+
+li.game-play-points {
+  margin: 0 1em;
+}
+
+.top-10 {
+  font-family: "orbitron",sans-serif;
+  color: $yellow;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .06em;
+  margin: 0;
+  font-size: 1.0625em;
+}
